@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+screenshot_dir=/home/$USER/Pictures/Screenshots
+mode=$1
+
+if [ ! -e $screenshot_dir ]
+then
+  mkdir -p $screenshot_dir
+fi
+
+if [ $mode = advance ]
+then
+  grim -g "$(slurp)" - | satty --filename - --output-filename $screenshot_dir/$(date +'%Y%m%d%H%M%S_1.png')
+else
+  grim $screenshot_dir/$(date +'%Y%m%d%H%M%S_1.png') && notify-send "Capture saved to $screenshot_dir"
+fi
+
+ 
+
+

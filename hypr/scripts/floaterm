@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+floaterm_win=$(hyprctl clients | grep "class: floaterm")
+
+if [ -z $floaterm_win ]
+then
+  env WAYLAND_DISPLAY= alacritty -o font.size=8 --class floaterm
+else
+  hyprctl dispatch togglespecialworkspace floaterm
+fi

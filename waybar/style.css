@@ -1,7 +1,9 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: hack Nerd Font, monospace;
+  font-family:
+    hack Nerd Font,
+    monospace;
   font-weight: bold;
   font-size: 14px;
   min-height: 0;
@@ -22,8 +24,8 @@ tooltip {
 
 #workspaces button {
   padding: 5px;
-  color: #313244;
-  margin-right: 0px;
+  color: #787878;
+  margin-right: 5px;
 }
 
 #workspaces button.active {
@@ -104,8 +106,8 @@ tooltip {
 #clock {
   color: #fab387;
   border-radius: 5px 5px 5px 5px;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 20px;
+  margin-right: 10px;
   border-left: 0px;
   border-right: 0px;
 }
