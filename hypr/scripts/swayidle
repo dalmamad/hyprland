@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+swayidle -w \
+  timeout 300 'if ! pgrep swaylock; then swaylock --screenshots --effect-blur 7x5 --line-color 3162de --ring-color 3162de & fi' \
+  timeout 305 'hyprctl dispatch dpms off' \
+  resume 'hyprctl dispatch dpms on' \
+  timeout 400 'systemctl suspend' \
+  before-sleep 'if ! pgrep swaylock; then swaylock --screenshots --effect-blur 7x5 --line-color 3162de --ring-color 3162de & fi'
