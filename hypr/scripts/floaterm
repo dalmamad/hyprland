@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 
-floaterm_win=$(hyprctl clients | grep "floaterm")
-notify-send $floaterm_win
+floaterm_win=$(hyprctl clients | grep ": floaterm")
 
 if [ -z $floaterm_win ]
 then
-  notify-send $floaterm_win
-  env foot --title floaterm
+  foot --title floaterm
 else
   hyprctl dispatch togglespecialworkspace floaterm
 fi
