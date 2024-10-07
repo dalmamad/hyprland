@@ -7,7 +7,7 @@
   "gtk-layer-shell": true,
   "height": 40,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  // "modules-center": ["clock"],
+  "modules-center": ["clock"],
   "modules-right": [
     "tray",
     "memory",
